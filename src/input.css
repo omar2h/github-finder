@@ -5,3 +5,30 @@
 .error {
   @apply text-center capitalize text-red-500 dark:text-red-500;
 }
+
+.card {
+  @apply rounded-md border border-transparent bg-white p-4 py-4 shadow-sm transition duration-500 hover:shadow-md dark:border-gray-700 dark:bg-zinc-900;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.flex-0 {
+  flex: 0 0 auto;
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid #94a3b8;
+  border-radius: 50%;
+  border-top-color: #645cff;
+  animation: spinner 0.6s linear infinite;
+}
+.loading {
+  margin: 0 auto;
+  margin-top: 4rem;
+}

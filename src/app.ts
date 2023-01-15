@@ -23,6 +23,10 @@ formDom.addEventListener("submit", async (e) => {
           ui.displayProfile(data.profileData);
         }
       });
+      await github.getRepos(userText, 5, "created:asc").then((data) => {
+        console.log(data);
+        ui.displayRepos(data);
+      });
     } catch {
       ui.displayAlert("error", "there was an error...");
     }
