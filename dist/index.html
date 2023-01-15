@@ -8,9 +8,9 @@
     <title>Github Finder</title>
   </head>
   <body
-    class="min-h-screen bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-white"
+    class="flex min-h-screen flex-grow flex-col bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-white"
   >
-    <main class="mx-auto w-[90vw] max-w-6xl py-20">
+    <main class="mx-auto w-[90vw] max-w-6xl pt-20">
       <!-- light/dark theme toggler -->
       <button
         class="theme-toggler fixed bottom-0 right-0 z-20 mb-8 mr-6 flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-center transition duration-500 hover:-translate-y-1 hover:border hover:border-gray-900 dark:bg-slate-800 dark:hover:border-gray-50"
@@ -67,6 +67,16 @@
       </section>
       <section id="results" class="mt-10"></section>
     </main>
+    <footer class="mt-8">
+      <p class="text-center">
+        GitHub Finder &copy; <span id="currentYear"></span>
+      </p>
+    </footer>
+    <script>
+      const currentYear = document.querySelector("#currentYear");
+      const date = new Date();
+      currentYear.textContent = date.getFullYear();
+    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
