@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
     <main class="mx-auto w-[90vw] max-w-6xl py-20">
       <!-- light/dark theme toggler -->
       <button
-        class="fixed bottom-0 right-0 z-20 mb-8 mr-6 flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-center transition duration-500 hover:-translate-y-1 hover:border hover:border-gray-900 dark:bg-slate-800 dark:hover:border-gray-50"
+        class="theme-toggler fixed bottom-0 right-0 z-20 mb-8 mr-6 flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-center transition duration-500 hover:-translate-y-1 hover:border hover:border-gray-900 dark:bg-slate-800 dark:hover:border-gray-50"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -46,13 +46,9 @@
       <section
         class="finder mx-auto flex w-11/12 flex-col items-center justify-center"
       >
-        <picture class="block w-28 sm:w-44">
-          <source
-            srcset="./img/github-mark-white.png"
-            media="(prefers-color-scheme: dark)"
-          />
-          <img src="./img/github-mark.png" alt="logo" />
-        </picture>
+        <div
+          class="logo h-40 w-40 bg-dark-logo bg-contain dark:bg-light-logo"
+        ></div>
         <h3 class="m-4 text-3xl sm:text-4xl">Github Finder</h3>
         <form
           class="form mt-4 grid w-full max-w-2xl grid-cols-5 rounded-sm bg-white p-6 shadow-sm transition duration-500 hover:shadow-md sm:p-10"
@@ -69,129 +65,7 @@
           </button>
         </form>
       </section>
-      <section id="results" class="mt-10">
-        <!-- <article
-          id="profile"
-          class="flex flex-col items-center justify-center rounded-md border border-transparent bg-white p-4 py-4 shadow-sm transition duration-500 hover:shadow-md dark:border-gray-700 dark:bg-zinc-900 sm:grid sm:grid-cols-10 sm:gap-5 sm:px-2"
-        >
-          <div
-            class="col-1 flex w-full flex-col items-center justify-center gap-2 p-0 sm:col-span-2"
-          >
-            <img src="./img/github-mark.png" class="block" alt="avatar" />
-            <button
-              class="flex w-3/6 items-center justify-center rounded-xl bg-blue-500 py-1 px-2 text-white sm:w-full"
-            >
-              <a href="#">View Profile</a>
-            </button>
-          </div>
-
-          <div
-            class="col-2 flex w-full flex-col items-center sm:col-span-8 sm:items-start"
-          >
-            <div
-              class="badges-container left mt-6 grid grid-cols-2 gap-x-2 gap-y-2 sm:mt-0 sm:flex"
-            >
-              <div
-                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-              >
-                Public Repos: 55
-              </div>
-              <div
-                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-              >
-                Public Repos: 55
-              </div>
-              <div
-                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-              >
-                Public Repos: 55
-              </div>
-              <div
-                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-              >
-                Public Repos: 55
-              </div>
-            </div>
-            <div class="table w-full text-gray-600 dark:text-gray-300">
-              <table
-                class="mt-2 w-full border-separate rounded-lg border border-gray-700 sm:mt-4"
-              >
-                <tr class="py-1 px-2">
-                  <td class="border-0 border-b border-gray-700 py-1 px-2">
-                    Company:
-                  </td>
-                </tr>
-                <tr class="border border-gray-700">
-                  <td class="border-0 border-b border-gray-700 py-1 px-2">
-                    Website/blog:
-                  </td>
-                </tr>
-                <tr class="border border-gray-700">
-                  <td class="border-0 border-b border-gray-700 py-1 px-2">
-                    Location:
-                  </td>
-                </tr>
-                <tr class="border border-gray-700">
-                  <td class="border-0 border-gray-700 py-1 px-2">
-                    Member since:
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </article> -->
-        <article>
-          <h1 class="text-3xl">Latest Repos</h1>
-          <div class="card mt-2">
-            <div class="flex w-full items-center justify-between sm:max-w-3xl">
-              <a href="#">dddddddddddddddddddd</a>
-              <div
-                class="badges-container flex w-full flex-col gap-y-2 sm:flex-row sm:justify-end sm:gap-x-2"
-              >
-                <div
-                  class="badge flex-0 w-20 items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-                <div
-                  class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-                <div
-                  class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mt-2">
-            <div class="flex w-full items-center justify-between sm:max-w-3xl">
-              <a href="#">dddddddddddddddddddd</a>
-              <div
-                class="badges-container flex flex-col gap-y-2 sm:flex-row sm:gap-x-2"
-              >
-                <div
-                  class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-                <div
-                  class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-                <div
-                  class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
-                >
-                  dddddddd
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
+      <section id="results" class="mt-10"></section>
     </main>
     <script type="module" src="./app.js"></script>
   </body>

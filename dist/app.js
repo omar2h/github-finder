@@ -5,9 +5,10 @@ const ui = new UI();
 const client_id = "a5b1755bf810e8b432ce";
 const client_secret = "e7176eab072f4cdad3c276bb33d8c644d9fddd95";
 const github = new GitHub(client_id, client_secret);
+const html = getElement("html");
 const formDom = getElement(".form");
 const inputDom = getElement(".input");
-const results = getElement("#results");
+const themeToggler = getElement(".theme-toggler");
 formDom.addEventListener("submit", async (e) => {
     e.preventDefault();
     const userText = inputDom.value;
@@ -33,5 +34,8 @@ formDom.addEventListener("submit", async (e) => {
             ui.displayAlert("error", "there was an error...");
         }
     }
+});
+themeToggler.addEventListener("click", () => {
+    html.classList.toggle("dark");
 });
 //# sourceMappingURL=app.js.map
