@@ -19,19 +19,23 @@ formDom.addEventListener("submit", async (e) => {
         ui.displaySpinner();
         try {
             await github.getProfile(userText).then((data) => {
-                if (data.profileData.message === "Not Found")
-                    ui.displayAlert("error", "no matching results. Please try again");
+                if (data.profileData.message === "Not Found") {
+                    throw new Error("no matching results. Please try again");
+                }
                 else {
                     ui.displayProfile(data.profileData);
+                    return true;
                 }
             });
             await github.getRepos(userText, 5, "created:asc").then((data) => {
-                console.log(data);
                 ui.displayRepos(data);
             });
         }
-        catch {
-            ui.displayAlert("error", "there was an error...");
+        catch (err) {
+            if (err instanceof Error)
+                ui.displayAlert("error", err.message);
+            else
+                ui.displayAlert("error", "there was an error...");
         }
     }
 });
