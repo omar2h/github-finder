@@ -3,7 +3,7 @@ import { getElement } from "./helper.js";
 import { UI } from "./ui.js";
 const ui = new UI();
 const client_id = "a5b1755bf810e8b432ce";
-const client_secret = "e7176eab072f4cdad3c276bb33d8c644d9fddd95";
+const client_secret = "12ad90e106e2a19a8d3f478da1a298b1338b2375";
 const github = new GitHub(client_id, client_secret);
 const html = getElement("html");
 const formDom = getElement(".form");
@@ -28,6 +28,8 @@ formDom.addEventListener("submit", async (e) => {
                 }
             });
             await github.getRepos(userText, 5, "created:asc").then((data) => {
+                if (data.message != null)
+                    throw new Error(data.message);
                 ui.displayRepos(data);
             });
         }
