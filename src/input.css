@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.error {
+  @apply text-center capitalize text-red-500 dark:text-red-500;
+}

@@ -11,6 +11,7 @@
     class="min-h-screen bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-white"
   >
     <main class="mx-auto w-[90vw] max-w-6xl py-20">
+      <!-- light/dark theme toggler -->
       <button
         class="fixed bottom-0 right-0 z-20 mb-8 mr-6 flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 text-center transition duration-500 hover:-translate-y-1 hover:border hover:border-gray-900 dark:bg-slate-800 dark:hover:border-gray-50"
       >
@@ -54,7 +55,7 @@
         </picture>
         <h3 class="m-4 text-3xl sm:text-4xl">Github Finder</h3>
         <form
-          class="form mt-4 grid w-full max-w-2xl grid-cols-5 rounded-sm bg-white p-10"
+          class="form mt-4 grid w-full max-w-2xl grid-cols-5 rounded-sm bg-white p-6 shadow-sm transition duration-500 hover:shadow-md sm:p-10"
         >
           <input
             class="input col-span-4 rounded-l-md border border-gray-200 border-r-transparent bg-gray-100 py-[0.375rem] px-4 dark:text-gray-900"
@@ -68,7 +69,78 @@
           </button>
         </form>
       </section>
-      <section id="profile"></section>
+      <section id="results" class="mt-10">
+        <!-- <article
+          id="profile"
+          class="flex flex-col items-center justify-center rounded-md border border-transparent bg-white p-4 py-4 shadow-sm transition duration-500 hover:shadow-md dark:border-gray-700 dark:bg-zinc-900 sm:grid sm:grid-cols-10 sm:gap-5 sm:px-2"
+        >
+          <div
+            class="col-1 flex w-full flex-col items-center justify-center gap-2 p-0 sm:col-span-2"
+          >
+            <img src="./img/github-mark.png" class="block" alt="avatar" />
+            <button
+              class="flex w-3/6 items-center justify-center rounded-xl bg-blue-500 py-1 px-2 text-white sm:w-full"
+            >
+              <a href="#">View Profile</a>
+            </button>
+          </div>
+
+          <div
+            class="col-2 flex w-full flex-col items-center sm:col-span-8 sm:items-start"
+          >
+            <div
+              class="badges-container left mt-6 grid grid-cols-2 gap-x-2 gap-y-2 sm:mt-0 sm:flex"
+            >
+              <div
+                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
+              >
+                Public Repos: 55
+              </div>
+              <div
+                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
+              >
+                Public Repos: 55
+              </div>
+              <div
+                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
+              >
+                Public Repos: 55
+              </div>
+              <div
+                class="badge flex items-center rounded-lg border border-gray-500 bg-transparent py-1 px-2 text-xs text-gray-500 dark:border-purple-200 dark:text-purple-200"
+              >
+                Public Repos: 55
+              </div>
+            </div>
+            <div class="table w-full text-gray-600 dark:text-gray-300">
+              <table
+                class="mt-2 w-full border-separate rounded-lg border border-gray-700 sm:mt-4"
+              >
+                <tr class="py-1 px-2">
+                  <td class="border-0 border-b border-gray-700 py-1 px-2">
+                    Company:
+                  </td>
+                </tr>
+                <tr class="border border-gray-700">
+                  <td class="border-0 border-b border-gray-700 py-1 px-2">
+                    Website/blog:
+                  </td>
+                </tr>
+                <tr class="border border-gray-700">
+                  <td class="border-0 border-b border-gray-700 py-1 px-2">
+                    Location:
+                  </td>
+                </tr>
+                <tr class="border border-gray-700">
+                  <td class="border-0 border-gray-700 py-1 px-2">
+                    Member since:
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article> -->
+      </section>
     </main>
     <script type="module" src="./app.js"></script>
   </body>
